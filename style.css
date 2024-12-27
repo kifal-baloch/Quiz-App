@@ -1,0 +1,110 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+}
+
+h1 {
+  color: #333;
+}
+
+.quiz-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  color: #3a77ff;
+}
+
+.card p {
+  color: #666;
+}
+
+.quiz-section {
+  margin-top: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+.question-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.options label {
+  display: block;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+button {
+  background: #3a77ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.2s;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:enabled {
+  background: #2e5acb;
+}
+
+.quiz-cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Reset any styles that might have changed after quiz restart */
+.quiz-cards .card {
+  width: 30%;
+  margin: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}

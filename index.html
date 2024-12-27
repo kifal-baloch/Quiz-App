@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Quiz App</h1>
+    <div class="quiz-cards">
+      <div class="card" onclick="startQuiz(1)">
+        <h2>HTML Quiz</h2>
+        <p>Test your HTML knowledge with 10 questions!</p>
+      </div>
+      <div class="card" onclick="startQuiz(2)">
+        <h2>CSS Quiz</h2>
+        <p>Challenge your CSS skills!</p>
+      </div>
+      <div class="card" onclick="startQuiz(3)">
+        <h2>JavaScript Quiz</h2>
+        <p>Are you a JS master? Find out!</p>
+      </div>
+    </div>
+
+    <div class="quiz-section hidden" id="quiz-section">
+      <div class="question-box">
+        <p id="timer">1:10</p>
+        <h2 id="question"></h2>
+        <div class="options">
+          <label>
+            <input type="radio" name="answer" value="1" onclick="enableBtn()">
+            <span id="option1"></span>
+          </label>
+          <label>
+            <input type="radio" name="answer" value="2" onclick="enableBtn()">
+            <span id="option2"></span>
+          </label>
+          <label>
+            <input type="radio" name="answer" value="3" onclick="enableBtn()">
+            <span id="option3"></span>
+          </label>
+        </div>
+        <button id="btn" disabled onclick="nextQuestion()">Next</button>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+  <script src="css.js"></script>
+  <script src="js.js"></script>
+</body>
+</html>
